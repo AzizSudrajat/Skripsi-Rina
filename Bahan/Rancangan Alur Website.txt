@@ -1,0 +1,86 @@
+Perancangan alur website :
+ 1. Dashboard Kasus
+ 	1.1 Listing Perkasus
+ 	1.2 Chart Perkasus
+ 	1.3 Show All Analisis
+ 	1.4 Print Laporan perkasus
+
+ 2. Tampilan kasus atau pilih kasus baru
+
+ 3. Pilihan Kriteria Baru atau Default
+ 	3.1 Apabila Mimilih Kriteria baru (Analisa)
+
+ 4. Pilih Alternatif Baru atau Default
+ 	4.1 Apabila Memilih Alternatif Baru (Analisa)
+
+ 5. Rangking (Result) /Redirect Home
+
+
+Challange :
+- Dinamis Kriteria
+- Dinamis Alternatif
+- Proses AHP di awali dengan Define Kasus
+- Chart per kasus (Show Pop Up atau Page baru)
+- Print Laporan per kasus.
+- Default Value Kriteria dan Alternatif
+
+Struktur Alur website mengguanakan Hierarchy Navigation
+
+Perancangan Tabel
+1. Tabel User
+	- id_user* : varchar (15)
+	- nama_user : varchar (25)
+	- level : int (1)
+	- deskripsi : varchar (50)
+
+2. Tabel Kasus 
+	- id_kasus* : varchar (6) : ex (K1)
+	- nama_kasus : varchar (25)
+	- deskripsi : varchar (50)
+
+	Keterangan Kasus :
+		- 0 = Default
+		- RandNum = Kasus Baru
+
+3. Tabel Kriteria
+	- id_kriteria* : varchar (6)
+	- nama_kriteria : varchar (25)
+	- deskripsi : varchar (25)
+	- jumlah_kriteria : double
+	- bobot_kriteria : double
+	- kasus_id** : varchar (6)
+
+4. Tabel Nilai 
+	- id_nilai* : int (11)
+	- jumalah_nilai : int (2)
+	- keterangan_nilai : varchar (50)
+	- kasus_id** : varchar (6)
+
+	keterangan Nilai : 
+		- 1 = Sama penting dengan 
+		- 2 = Mendekati sedikit lebih penting dari
+		- 3 = Sedikit lebih penting dari
+		- 4 = Mendekati lebih penting dari
+		- 5 = Mutlak sangat penting dari
+
+5. Tabel Analisan Kriteria
+	- kriteria_pertama : varchar (6) 
+	- nilai_analisa_kriteria : double
+	- hasil_analisa_kriteria :double
+	- kriteria_kedua : varchar (6)
+	- kasus_id** : varchar (6)
+
+6. Tabel Alternatif 
+	- id_alternatif : varchar (6)
+	- nama_alternatif : varchar (25)
+	- deskripsi : varchar (25)
+	- hasil_akhir : double
+	- kasus_id** : varchar (6)
+
+7. 
+
+Keterangan :
+*  = Primary Key
+** = Forign Key
+
+
