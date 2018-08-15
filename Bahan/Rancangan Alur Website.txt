@@ -64,20 +64,35 @@ Perancangan Tabel
 		- 5 = Mutlak sangat penting dari
 
 5. Tabel Analisan Kriteria
-	- kriteria_pertama : varchar (6) 
+	- kriteria_id_pertama** : varchar (6) 
+	- kriteria_id_kedua** : varchar (6)
 	- nilai_analisa_kriteria : double
 	- hasil_analisa_kriteria :double
-	- kriteria_kedua : varchar (6)
 	- kasus_id** : varchar (6)
 
 6. Tabel Alternatif 
-	- id_alternatif : varchar (6)
+	- id_alternatif* : varchar (6)
 	- nama_alternatif : varchar (25)
 	- deskripsi : varchar (25)
 	- hasil_akhir : double
 	- kasus_id** : varchar (6)
 
-7. Tabel 
+7. Tabel Analisa Alternatif
+	- kriteria_id** : varchar (6)
+	- alternatif_id_pertama** : varchar (6)
+	- alternatif_id_kedua** : varchar (6)
+	- nilai_analisa_alternatif : double
+	- hasil_analisa_alternatif : double
+	- kasus_id** : varchar (6)
+
+8. Tabel Hasil Alternatif dan Kriteria
+	- kriteria_id** : varchar (6)
+	- alternatif_id** : varchar (6)
+	- jumlah_alt_kri : double
+	- skor_alt_kri : double
+	- hasil_alt_kri : double
+	- kasus_id** : varchar (6)
+
 
 Keterangan :
 *  = Primary Key
