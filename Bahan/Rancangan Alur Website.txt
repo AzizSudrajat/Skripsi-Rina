@@ -27,34 +27,35 @@ Challange :
 Struktur Alur website mengguanakan Hierarchy Navigation
 
 Perancangan Tabel
-1. Tabel User
+1. Tabel User (user)
 	- id_user* : varchar (15)
-	- nama_user : varchar (25)
+	- username : varchar (25)
+	- password : varchar (25)
 	- level : int (1)
 	- deskripsi : varchar (50)
 
-2. Tabel Kasus 
+2. Tabel Kasus (kasus)
 	- id_kasus* : varchar (6) : ex (K1)
 	- nama_kasus : varchar (25)
+	- tanggal_kasus : varchar (25)
 	- deskripsi : varchar (50)
 
 	Keterangan Kasus :
 		- 0 = Default
 		- RandNum = Kasus Baru
 
-3. Tabel Kriteria
+3. Tabel Kriteria (kriteria)
 	- id_kriteria* : varchar (6)
 	- nama_kriteria : varchar (25)
-	- deskripsi : varchar (25)
+	- deskripsi : varchar (50)
 	- jumlah_kriteria : double
 	- bobot_kriteria : double
-	- kasus_id** : varchar (6)
+	
 
 4. Tabel Nilai 
 	- id_nilai* : int (11)
-	- jumalah_nilai : int (2)
+	- jumlah_nilai : int (2)
 	- keterangan_nilai : varchar (50)
-	- kasus_id** : varchar (6)
 
 	keterangan Nilai : 
 		- 1 = Sama penting dengan 
@@ -63,7 +64,7 @@ Perancangan Tabel
 		- 4 = Mendekati lebih penting dari
 		- 5 = Mutlak sangat penting dari
 
-5. Tabel Analisan Kriteria
+5. Tabel Analisa Kriteria
 	- kriteria_id_pertama** : varchar (6) 
 	- kriteria_id_kedua** : varchar (6)
 	- nilai_analisa_kriteria : double
@@ -73,7 +74,7 @@ Perancangan Tabel
 6. Tabel Alternatif 
 	- id_alternatif* : varchar (6)
 	- nama_alternatif : varchar (25)
-	- deskripsi : varchar (25)
+	- deskripsi : varchar (50)
 	- hasil_akhir : double
 	- kasus_id** : varchar (6)
 
